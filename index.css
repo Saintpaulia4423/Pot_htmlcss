@@ -163,14 +163,15 @@ header {
 }
 
 .hero-box {
+    box-sizing: border-box;
     display: block;
     height: auto;
-    max-width: 1040px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 500px;
     position: relative;
     top: 200px;
-    width: 500px;
+    width: 94vw;
 }
 
 .hero-box img {
@@ -281,6 +282,7 @@ header {
 
 /* バナースタイル */
 .banner {
+    bottom: 0px;
     display: block;
     float: right;
     position: fixed;
@@ -317,7 +319,7 @@ header {
 
     .show-mobile-menu span {
         border: 0.5px;
-        background: gray;
+        background: rgba(128, 128, 128, 0.75);
         display: inline-block;
         height: 2px;
         position: absolute;
@@ -361,10 +363,11 @@ header {
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
-        left: 125vw;
+        left: 150vw;
         position: relative;
         top: 7px;
         transform: translateY(0);
+        transition: left 0.5s ease-in-out;
         width: 100vw;
         z-index: 5;
     }
@@ -418,7 +421,6 @@ header {
 
     #toggle-mobile-menu:checked~.nav-bar {
         left: 0px;
-        transition: left 0.5s ease-in-out;
     }
 
 
@@ -430,6 +432,10 @@ header {
 
     .site-base {
         margin: 0 10px;
+    }
+
+    .site-base span.mobile-mode {
+        display: inline;
     }
 
     /* ヘッダースマートフォン */
@@ -465,13 +471,22 @@ header {
     }
 
     .hero-box img {
-        right: 120px;
+        left: 260px;
+        right: auto;
         top: -40px;
-        width: 23%;
+        width: 100px;
     }
 
     .hero-box .annotation-text {
-        font-size: 0.75em;
+        line-height: 1.4em;
+        letter-spacing: 0.1em;
+        font-size: 0.7em;
+        width: 100%;
+    }
+
+    .accessory-container {
+        max-width: 500px;
+        width: 100vw;
     }
 
 
@@ -484,8 +499,5 @@ header {
         line-height: 40px;
     }
 
-    .section-title h2 span {
-        display: inline;
-    }
 
 }
